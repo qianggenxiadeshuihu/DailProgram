@@ -28,6 +28,14 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".thirdActivity"
+            android:label="Third View" >
+            <intent-filter>
+                <action android:name="com.example.activitytest.THIRD"	/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
