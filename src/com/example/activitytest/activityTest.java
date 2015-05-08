@@ -18,6 +18,8 @@ import android.widget.Toast;
 
 public class activityTest extends Activity {
 
+	public static String phoneNumber;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -26,7 +28,7 @@ public class activityTest extends Activity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.layout_1);
 		
-		Button button1 = (Button)findViewById(R.id.button1);
+		Button button1 = (Button)findViewById(R.id.button_phone_number);
 		button1.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -35,6 +37,23 @@ public class activityTest extends Activity {
 				Toast.makeText(activityTest.this, "you have clicked button_1", Toast.LENGTH_LONG).show();
 				Intent intent = new Intent(getPackageName()+".SECOND");
 				startActivity(intent);
+			}
+		});
+		
+		Button button2 = (Button)findViewById(R.id.button_info_display);
+		button2.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				if (phoneNumber.length() != 0) {
+					Toast.makeText(activityTest.this, phoneNumber, Toast.LENGTH_SHORT).show();
+				} else {
+					Toast.makeText(activityTest.this, "Pls input phone number first", Toast.LENGTH_LONG).show();
+				}
+				
+//				Intent intent = new Intent(getPackageName()+".SECOND");
+//				startActivity(intent);
 			}
 		});
 			

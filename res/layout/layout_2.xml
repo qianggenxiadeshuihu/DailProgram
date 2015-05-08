@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:stretchColumns="1"
     tools:context=".secondActivity" >
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="press me to dial out" />
-	<EditText
-	    android:id="@+id/text2"
-	    android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="input" />
-</LinearLayout>
+    <TableRow >
+        <TextView
+            android:layout_height="wrap_content"
+            android:text=" phone number:"/>
+        <EditText
+            android:id = "@+id/phone_number"
+            android:layout_height = "wrap_content"
+            android:hint = "input phone number" />
+    </TableRow>
+    <TableRow >
+        <Button
+			android:id="@+id/button_dialout"
+			android:layout_height="wrap_content"
+			android:layout_span="2"
+			android:text="save phone number" />
+    </TableRow>
+</TableLayout>

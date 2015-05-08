@@ -7,9 +7,15 @@
     tools:context="activityTest.FirstAct" >
 
     <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
+        android:id="@+id/button_phone_number"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="press me" />
+        android:text="input phone number" />
 
+    <Button
+        android:id="@+id/button_info_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="input info when in phone" />
+  
 </LinearLayout>
