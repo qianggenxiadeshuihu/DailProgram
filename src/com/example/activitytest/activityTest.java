@@ -32,6 +32,22 @@ public class activityTest extends Activity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.layout_1);
 		
+		try {
+			/* output some information when launched */
+			new Thread(new Runnable() {
+				
+				@Override
+				public void run() {
+					// TODO Auto-generated method stub
+					Log.e("thread_main", "thread_main");
+				}
+			}, "thread_main").start();
+		} catch (Exception e) {
+			// TODO: handle exception
+			Log.e("in create thread_main", e.getMessage());
+		}
+		
+		
 		Button button1 = (Button)findViewById(R.id.button_phone_number);
 		button1.setOnClickListener(new View.OnClickListener() {
 			
@@ -78,6 +94,8 @@ public class activityTest extends Activity {
 				startActivity(intent);
 			}
 		});
+		
+		
 			
 	}
 
